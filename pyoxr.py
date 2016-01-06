@@ -17,7 +17,8 @@ class OXRClient(object):
 
     def get_currencies(self):
         """
-        Get a JSON list of all currency symbols available from the Open Exchange Rates API, along with their full names.
+        Get a JSON list of all currency symbols available from the Open
+        Exchange Rates API, along with their full names.
         ref. https://oxr.readme.io/docs/currencies-json
         """
         return self.__request("currencies.json")
@@ -62,7 +63,8 @@ class OXRClient(object):
                 from_symbol,
                 to_symbol):
         """
-        Convert any money value from one currency to another at the latest API rates.
+        Convert any money value from one currency to another at the latest
+        API rates.
         ref. https://oxr.readme.io/docs/convert
         """
         endpoint = "convert/{}/{}/{}".format(value, from_symbol, to_symbol)
